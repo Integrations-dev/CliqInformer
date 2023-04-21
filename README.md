@@ -1,7 +1,7 @@
-# CliqInformer
+# GitHub Informer for Zoho Cliq
 The Github Action is used to integrate GitHub and Zoho Cliq, by notifying about the GitHub Events performed, to the Zoho Cliq Channels.
 
-CliqInformer requires the following inputs to integrate the **GitHub Actions** with your **Cliq** channels
+GitHub Informer requires the following inputs to integrate the **GitHub Actions** with your **Cliq** channels
 - Cliq Webhook Token
 - Cliq Channel API Endpoint or Unique Name
 - Individual messages for each of the GitHub events (in the name of **event**-message)
@@ -23,7 +23,7 @@ and use the secret as the '**channel-endpoint**' input in the job of your workfl
 
 ```yaml
   steps:
-    - uses: Integrations-dev/CliqInformer@v1
+    - uses: Integrations-dev/GitHub-Informer@v1
       with:
         channel-endpoint: ${{ secrets.SECRET_NAME }}
 ```
@@ -88,7 +88,7 @@ A GitHub Action is triggered by [user_name](https://www.github.com/user_name) at
 
 Upon successfully providing the inputs as per criteria, the message will be successfully sent to the Cliq Channel.
 
-The GitHub events that trigger a workflow are listed below, among which all events are supported by CliqInformer
+The GitHub events that trigger a workflow are listed below, among which all events are supported by GitHub Informer
 
 |    branch_protection_rule    |          check_run          |          check_suite         |            create            |           delete            |
 |            :----:            |           :----:            |            :----:            |            :----:            |           :----:            |
@@ -112,7 +112,7 @@ jobs:
   test_name:
     runs-on: ubuntu-latest
     steps:
-      - uses: Integrations-dev/CliqInformer@v1
+      - uses: Integrations-dev/GitHub-Informer@v1
         with:
           channel-endpoint: ${{ secrets.ENDPOINT }}
 ```
@@ -121,5 +121,5 @@ That's all! You will start getting notified for each event occurring in GitHub t
 
 Go to the Actions tab of the repository to view the message status.
 
-Here is a Template Repository for the CliqInformer which you can use as a baseline to work with and customize to your usage.
+Here is a Template Repository for the GitHub Informer which you can use as a baseline to work with and customize to your usage.
 https://www.github.com/Integrations-dev/RepositoryTemplate
