@@ -1,5 +1,5 @@
-name: "CliqInformer"
-description: "The Github Action integrates Github and Zoho Cliq by notifying about the Github Events Performed to the Cliq Channels."
+name: "GitHub Informer for Zoho Cliq"
+description: "The GitHub Action integrates GitHub and Zoho Cliq by notifying about the GitHub Events Performed to the Cliq Channels."
 
 branding:
   icon: 'message-square'
@@ -340,7 +340,7 @@ runs:
         shell: bash
         run: |
           JAVA=$JAVA_HOME_19_X64/bin/java
-          CONNECTOR=$GITHUB_ACTION_PATH/src/CliqInformer.java
+          CONNECTOR=$GITHUB_ACTION_PATH/src/GitHub-Informer.java
           if ${{ env.message != '' }}
           then
             $JAVA $CONNECTOR "${{ inputs.channel-endpoint }}"
