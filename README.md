@@ -1,5 +1,5 @@
 # GitHub Informer for Zoho Cliq
-The Github Action is used to integrate GitHub and Zoho Cliq, by notifying about the GitHub Events performed, to the Zoho Cliq Channels.
+The GitHub Action is used to integrate GitHub and Zoho Cliq, by notifying about the GitHub Events performed, to the Zoho Cliq Channels.
 
 GitHub Informer requires the following inputs to integrate the **GitHub Actions** with your **Cliq** channels
 - Cliq Webhook Token
@@ -7,7 +7,7 @@ GitHub Informer requires the following inputs to integrate the **GitHub Actions*
 - Individual messages for each of the GitHub events (in the name of **event**-message)
 - A default message that you want to send if the message is not specified for that event.
   
-## Github Secret for Channel Endpoint 🔗
+## GitHub Secret for Channel Endpoint 🔗
 You must add GitHub Secret, which contains the channel endpoint in the format 
 
 ```
@@ -61,7 +61,7 @@ We also provide several shortcuts to obtain the variables that you want to inser
   - **(action)**: which will be replaced by the Action the Event is performing with
   - **(me)**: which will be replaced with the GitHub user performing the action.
   - **(repo)**: which will be replaced by the Repository where the GitHub action is performed
-  - **(ref)**: which will be replaced by the Branch/Tag where the Github action is performed
+  - **(ref)**: which will be replaced by the Branch/Tag where the GitHub action is performed
   - **(workflow)**: which will be replaced by the workflow on which the GitHub Action is performed
   - **(rule)**: which will be replaced by the Branch Protection Rule (if the Event is Branch Protection Rule)
   - **(run)**: which will be replaced by the Check Run (if the Event is Check Run)
