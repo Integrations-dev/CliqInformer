@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Objects;
-public class CliqInformer {
+public class GitHub-Informer {
 	public static void main(String args[]) {
 		System.out.println("Calling Cliq...");
 		HttpURLConnection connection;
@@ -61,7 +61,7 @@ public class CliqInformer {
 			{
 				Action = "made";
 			}
-			String CliqInformerURL = "https://workdrive.zohoexternal.com/external/a55ce4b1d1b64d36de31b77b6067d0a74b47b8733459390605c849bc880b05e8/download?directDownload=true";
+			String GitHubInformerURL = "https://workdrive.zohoexternal.com/external/a55ce4b1d1b64d36de31b77b6067d0a74b47b8733459390605c849bc880b05e8/download?directDownload=true";
 			message = CustomMessage;
 			if(CustomMessage != null)
 			{
@@ -741,7 +741,7 @@ public class CliqInformer {
 				for(String msg : messages)
 				{
 				  msg = msg.replace("\"","'");
-				  String TextParams = "{\n\"text\":\"" + msg + "\",\n\"bot\":\n{\n\"name\":\"CliqInformer\",\n\"image\":\"" + CliqInformerURL + "\"}}";
+				  String TextParams = "{\n\"text\":\"" + msg + "\",\n\"bot\":\n{\n\"name\":\"GitHub Informer for Zoho Cliq\",\n\"image\":\"" + GitHubInformerURL + "\"}}";
 				  connection = (HttpURLConnection) new URL(CliqChannelLink).openConnection();
 				  connection.setRequestMethod("POST");
 				  connection.setRequestProperty("Content-Type","application/json");
@@ -784,7 +784,7 @@ public class CliqInformer {
 			else if(MESSAGE_SEND_FAILURE_ERROR)
 			  ERROR_MESSAGE = ERROR_MESSAGE;
 			else if(status == 204)
-			  ERROR_MESSAGE = "CliqInformer executed Successfully";
+			  ERROR_MESSAGE = "GitHub Informer executed Successfully";
 			writeGithubOutput(status,ERROR_MESSAGE);
 		}  catch (MalformedURLException e) {
 			e.printStackTrace();
