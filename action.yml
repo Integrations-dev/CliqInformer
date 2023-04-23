@@ -340,7 +340,7 @@ runs:
         shell: bash
         run: |
           JAVA=$JAVA_HOME_19_X64/bin/java
-          CONNECTOR=$GITHUB_ACTION_PATH/src/GitHub-Informer.java
+          CONNECTOR=$GITHUB_ACTION_PATH/src/GitHub_Informer.java
           if ${{ env.message != '' }}
           then
             $JAVA $CONNECTOR "${{ inputs.channel-endpoint }}"
