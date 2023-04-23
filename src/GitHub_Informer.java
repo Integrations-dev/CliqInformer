@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Objects;
-public class GitHub-Informer {
+public class GitHub_Informer {
 	public static void main(String args[]) {
 		System.out.println("Calling Cliq...");
 		HttpURLConnection connection;
